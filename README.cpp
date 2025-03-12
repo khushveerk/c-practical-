@@ -6,6 +6,33 @@
 #include <set> 
 using namespace std; 
 
+double seriesSum(int n) { 
+double sum=0; 
+for (int i 1; in; i++) {  
+double term 1.0/ pow(1, 1); 
+ (120) ( 
+Sum term; // Alternate terms are negetive 
+} else { 
+sum term, 
+
+ } 
+ return sun 
+} 
+int main() {  
+int n; 
+ cout << "Enter the number of terms: "; 
+ cin>>n; 
+cout "Sum of series: <<< seriesSum(n) endl; 
+} 
+return 0; 
+
+
+##2
+#include <iostream> 
+#include <vector> 
+#include <set> 
+using namespace std; 
+
 void removeDuplicates (vector<int>& arr) { 
      set<int>uniqueElements(arr.begin(), arr.end()):  
      arr.assign(uniqueElements.begin(), uniqueElements.end()); 
@@ -23,7 +50,7 @@ int main() {
 }
 
 
-## 2
+## 3 
 #include <iostream>
 #include <algorithm> 
 using namespace std;
@@ -65,3 +92,4 @@ int main() {
 }
 
      
+
