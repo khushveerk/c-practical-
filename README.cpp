@@ -7,25 +7,24 @@
 using namespace std; 
 
 double seriesSum(int n) { 
-double sum=0; 
-for (int i 1; in; i++) {  
-double term 1.0/ pow(1, 1); 
- (120) ( 
-Sum term; // Alternate terms are negetive 
-} else { 
-sum term, 
-
- } 
- return sun 
+   double sum=0; 
+   for (int i =1; i <= n; i++) {  
+      double term 1.0/ pow(1, 1); 
+      if ( i% 2==0) {
+         sum = term; // Alternate terms are negetive 
+      } else { 
+         sum += term;
+      }
+   } 
+   return sum; 
 } 
 int main() {  
-int n; 
- cout << "Enter the number of terms: "; 
- cin>>n; 
-cout "Sum of series: <<< seriesSum(n) endl; 
-} 
-return 0; 
-
+   int n; 
+   cout << "Enter the number of terms: "; 
+   cin>>n; 
+   cout "Sum of series: <<< seriesSum(n) endl;  
+   return 0; 
+}
 
 ##2
 #include <iostream> 
@@ -92,4 +91,39 @@ int main() {
 }
 
      
+##4
+
+ #include <iostream> 
+#include <string> 
+#include <map> 
+  using namespace std; 
+
+void countOccurrences (string str) { 
+   map char, int freq; 
+
+   for (char : str) { 
+       if (isalpha(c)) { // Consider only alphabets  
+          freq[tolower(c)]++; 
+      }  
+   } 
+   cout<< "Character Frequency Table:\n"; 
+ 
+   for (auto pair freq) { 
+       cout<<< pair.first<< " -> " << pair.second << endl; 
+   }
+}
+int main() { 
+   string input; 
+   cout<< "Enter a string:"; 
+   getline(cin, input);  
+
+   countoccurrences(input); 
+   return 0; 
+
+
+
+
+
+
+
 
