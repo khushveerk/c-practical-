@@ -309,12 +309,15 @@ int main() {
 
 // Recursive search 
 
-int indexRec binarySearchRecursive(arr, 0, arr.size() - 1, key); 
-cout<<" Recursive Binary Search:"<< (indexRec !=-1 ? "Found at index" + to_string(indexRec): "Not found") << endl; 
+  int indexRec binarySearchRecursive(arr, 0, arr.size() - 1, key); 
+  cout<<" Recursive Binary Search:"<< (indexRec !=-1 ? "Found at index" + to_string(indexRec): "Not found") << endl; 
 
 // Iterative search    
+  int indexIter = binarySearchIterative(arr, key);  
+  cout << "Iterative Binary Search:"<< (indexIter !=-1 ? "Found at index" + to_string(indexIter): "Not found") << endl;
 
-
+  return 0;
+}
 
 
 
