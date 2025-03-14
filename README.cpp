@@ -257,22 +257,62 @@ vector<int> mergeArrays (vector<int>& arr1, vector<int>& arr2) {
    int i = 0, j = 0; 
    
    while (i < arr1.size() && jarr2.size()) { 
-      if (arr1[i] < arr2[j]) merged.push_back(arr1[i++]); 
-      else merged.push_back(arr2[j++]); 
-} 
-while (i < arr1.size()) merged.push_back(arr1[i++]); 
-while (j < arr2.size()) merged.push_back(arr2[j++]); 
-return merged; 
+      if (arr1[i] < arr2[j])
+         merged.push_back(arr1[i++]); 
+      else 
+         merged.push_back(arr2[j++]); 
+   } 
+   while (i < arr1.size()) merged.push_back(arr1[i++]); 
+   while (j < arr2.size()) merged.push_back(arr2[j++]); 
+   return merged; 
 } 
 int main() { 
-vector<int> arr1= (1, 3, 5, 5,7}; vector<int> arr2 = 2, 4, 6, 8); 
-vector<int> merged mergeArrays (arr1, агг2); 
-cout << "Merged sorted array: "; 
-for (int num: merged) cout << num << " "; 
-return 0;
-   
+    vector<int> arr1= {(1, 3, 5, 5,7};
+    vector<int> arr2 = {2, 4, 6, 8)}; 
+    vector<int> merged = mergeArrays (arr1, агг2); 
+    cout << "Merged sorted array: "; 
+    for (int num: merged) cout << num << " "; 
+    return 0;
+}   
 
+##6
 
+#include <iostream> 
+#include <vector> 
+using namespace std; 
+
+// Recursive binary search  
+int binarySearchRecursive (vector<int> arr, int left, int right, int key) { 
+   If (left right) return -1; 
+   int mid left (right left)/2; 
+
+   if(arr[mid] key) return mid;
+   if (arr[mid] key) return binarySearchRecursive(arr, left, mid-1, key); 
+   return binarySearchRecursive(arr, mid +1 ,right,key); 
+} 
+
+// Iterative binary search 
+int binarySearchIterative(vector<int> arr, int key) { 
+  int left =0, right =arr.size() - 1; 
+  while (left <= right) { 
+     int mid =left + (right - left)/2; 
+     if (arr[mid] == key) return mid; 
+     if (arr[mid] > key) right = mid-1;
+     else left = mid -1; 
+  }
+return -1; 
+} 
+
+int main() { 
+  vector<int> arr= (1, 3, 5, 7, 9, 11); 
+  int key = 5; 
+
+// Recursive search 
+
+int indexRec binarySearchRecursive(arr, 0, arr.size() - 1, key); 
+cout<<" Recursive Binary Search:"<< (indexRec !=-1 ? "Found at index" + to_string(indexRec): "Not found") << endl; 
+
+// Iterative search    
 
 
 
