@@ -207,7 +207,43 @@ int main() {
     toUppercase(str1); 
     cout << "Uppercase String: "<< str1 << endl;
 
+} 
 
+// Reverse string 
+void reverseString(char str[]) { 
+   int len = stringLength(str); 
+   for (int i = 0; i < len / 2; i++) { 
+      swap(str[i], str[len i 1]); 
+   } 
+} 
+int main() { 
+   char str1[100], str2[100]; 
+
+   cout << "Enter first string: "; 
+   cin >> str1; 
+   cout << "Enter second string: 
+   cin >> str2; 
+
+   displayASCII(str1); 
+
+   // Concatenation 
+   concatenateStrings (str1, str2); 
+   cout << "Concatenated String: <<<< str1 << endl; 
+
+      // Comparison 
+   cout << "Strings are <<< (compareStrings (str1, str2) ? "equal": "not equal") <<< endl; 
+
+      // String length 
+   cout << "Length of first string: <<<<< stringLength(str1) << endl; 
+
+      // Convert to uppercase toUppercase(str1); 
+   cout << "Uppercase String: <<<<< str1 << endl; 
+
+      // Reverse string 
+   reverseString(str1); 
+   cout << "Reversed String: <<<< str1 << endl; 
+   return 0; 
+}
 
 
 
