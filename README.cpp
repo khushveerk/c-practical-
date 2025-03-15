@@ -438,6 +438,177 @@ int main() {
 }
 
 
+##9
+
+#include <iostream>   
+using namespace std; 
+
+class Person { 
+protected: 
+   string name; 
+   int age; 
+
+public: 
+   void input() { 
+      cout << "Enter name and age:  
+      cin >> name >> age; 
+   }
+   void display() { 
+      cout << "Name: "<< name << ", Age: " << age << endl; 
+   } 
+}; 
+
+class Student public Person { 
+   string course; 
+
+public: 
+   void input() { 
+      Person::input(); 
+      cout << "Enter course: 
+      cin >> course; 
+   } 
+   void display() { 
+      Person::display(); 
+      cout << "Course: " << course << endl; 
+   } 
+}; 
+
+class Employee public Person { 
+   int salary;  
+public: 
+   void input() {
+      Person::input(); 
+      cout << "Enter salary: ";  
+      cin >> salary; 
+   }
+   void display() { 
+      Person::display(); 
+      cout << "Salary: " << salary << endl;
+   }
+};
+
+int main() { 
+   Student s; 
+   Employee e; 
+
+   cout << "Enter student details:\n"; 
+   s.input(); 
+
+   cout << "Enter employee details:\n"; 
+   e.input();
+   
+   cout << "\nStudent Details:\n"; 
+   s.display();
+   
+   cout << "\nEmployee Details:\n"; 
+   e.display();
+   
+   return 0; 
+}
+
+
+##10
+
+#include <iostream> 
+using namespace std; 
+
+class Triangle { 
+public: 
+   // Area with base & height 
+   double area(double base, double height) { 
+   return 0.5 *base*height; 
+   } 
+
+   // Area with 3 sides (Heron's formula) 
+   double area(double a, double b, double c) { 
+      double s (a + b + c) / 2; 
+      return sqrt(s* (s-a)*(s-b)*(s-c)); 
+   } 
+}; 
+
+int main() { 
+   Triangle t; 
+   cout << "Area (Base, Height): " << t.area(5, 10) << endl; 
+   cout << "Area (Three Sides): " << t.area(3, 4, 5) << endl; 
+   return 0;
+}
+
+   
+##11
+
+
+#include <iostream> 
+#include <stdexcept> 
+using namespace std; 
+
+class MatrixException: public exception { 
+public: 
+   const char* what() const throw() { 
+      return "Matrix dimensions are incompatible!"; 
+   } 
+}; 
+
+void checkCompatibility(int rows1, int cols1, int rows2, int cols2) { 
+   if (cols1 != rows2) throw MatrixException(); 
+} 
+
+int main() { 
+   try { 
+      checkCompatibility(2, 6, 4, 2); 
+   } catch (MatrixException e) { 
+      cout << "Eггог: <<<< e.what() << endl; 
+   } 
+   return 0; 
+}   
+
+
+##12
+
+
+#include <iostream> 
+#include <stdexcept> 
+using namespace std; 
+
+class PrimeException: public exception { 
+public: 
+   const char what() const throw() { 
+       return "Number must be greater than 11"; 
+   } 
+}; 
+
+// Function to check if a number is prime 
+bool isPrime(int num) { 
+   if (num < 2) 
+      throw PrimeException(); 
+   for(int i=2; i*i <=num; i++) { 
+      if (num % i == 0) 
+         return false; 
+   }
+   return true; 
+}
+
+int main() { 
+   int num; 
+   cout << "Enter a number: "; 
+   cin >> num; 
+
+   try { 
+      if (isPrime(num)) 
+      cout << num << " is a prime number.\n"; 
+      else 
+         cout << num << " is not a prime number.\n"; 
+   } catch (PrimeException& e) { 
+      cout << "Eггог: " <<e.what() << endl; 
+   } 
+   return 0;    
+}
+
+
+##13
+
+
+
+
 
 
 
