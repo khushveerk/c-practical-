@@ -606,10 +606,77 @@ int main() {
 
 ##13
 
+#include <iostream using namespace std; 
+
+class Student { 
+public: 
+   int rollNo; string name; 
+   string className; 
+   int year; 
+   float totalMarks; 
+
+   void input() { 
+      cout << "Enter Roll No, Name, Class, Year, and Total Marks: ";
+      cin>> rollNo >> name>> className >> year>> totalMarks; 
+   } 
+
+   void display() { 
+      cout << "Roll No: " <<rollNo <<", Name: "<< name 
+           << " , Class: " << className << ",Year:" <<year 
+           << " , Total Marks: " << totalMarks << endl; 
+   } 
+}; 
+
+int main() { 
+   Student students [5]; 
+ 
+   // Taking input for 5 students 
+   for (int i = 0; i < 5; i++) { 
+      cout << "Enter details for Student " << i +1 << ":\n"; 
+      students[i].input(); 
+   } 
+cout<<"\nStudent Details: \n"; 
+for (int i=0; i < 5; 1++) { 
+students[i].display(); 
+} 
+return 0; 
+} 
 
 
+##14
 
 
+#include <iostream> 
+#include <fstream> 
+using namespace std; 
+
+void removeWhitespace(string inputFile, string outputFile) { 
+   ifstream in(inputFile);  
+   ofstream out (outputFile);  
+   
+   if (!in || !out) { 
+      cout << "Егror opening files!" << endl; 
+      return;  
+   } 
+
+   char ch; 
+   while (in.get(ch)) { 
+      if (!isspace(ch)) 
+         out.put(ch);  
+   } 
+   
+   cout << "File copied successfully without whitespaces.\n";  
+   in.close();  
+   out.close();  
+} 
+
+int main() { 
+   string inputFile = "input.txt";  
+   string outputFile = "output.txt"; 
+
+   removeWhitespace (inputFile, outputFile); 
+   return 0;  
+}    
 
 
 
