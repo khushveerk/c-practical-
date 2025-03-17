@@ -38,7 +38,7 @@ void removeDuplicates (vector<int>& arr) {
      arr.assign(uniqueElements.begin(), uniqueElements.end()); 
 }
 int main() { 
-     vector<int arr (1, 2, 2, 3, 4, 4, 5, 6, 6); 
+     vector<int arr (1, 2, 2, 3, 7, 4, 5, 6, 7); 
 
      cout << "Original array: "; 
      for (int num :arr) cout<<num << " ";
@@ -74,7 +74,7 @@ int removeDuplicates(int arr[], int n) {
 }
 
 int main() {
-    int arr[] = {4, 2, 2, 1, 5, 4, 6, 3, 6};
+    int arr[] = {4, 2, 2, 1, 4, 4, 6, 3, 6};
     int n = sizeof(arr) / sizeof(arr[0]);
 
     cout << "Original array: ";
@@ -218,7 +218,7 @@ void reverseString(char str[]) {
    } 
 } 
 int main() { 
-   char str1[100], str2[100]; 
+   char str1[110], str2[110]; 
 
    cout << "Enter first string: "; 
    cin >> str1; 
@@ -305,7 +305,7 @@ return -1;
 } 
 
 int main() { 
-  vector<int> arr= (1, 3, 5, 7, 9, 11); 
+  vector<int> arr= (1, 3, 5, 7, 9, 13 ,); 
   int key = 5; 
 
 // Recursive search 
@@ -528,8 +528,8 @@ public:
 
 int main() { 
    Triangle t; 
-   cout << "Area (Base, Height): " << t.area(5, 10) << endl; 
-   cout << "Area (Three Sides): " << t.area(3, 4, 5) << endl; 
+   cout << "Area (Base, Height): " << t.area(7, 13) << endl; 
+   cout << "Area (Three Sides): " << t.area(2, 5, 9) << endl; 
    return 0;
 }
 
