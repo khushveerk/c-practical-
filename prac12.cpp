@@ -4,7 +4,7 @@ using namespace std;
 
 class PrimeException: public exception { 
 public: 
-   const char what() const throw() { 
+   const char* what() const throw() { 
        return "Number must be greater than 11"; 
    } 
 }; 
@@ -27,11 +27,11 @@ int main() {
 
    try { 
       if (isPrime(num)) 
-      cout << num << " is a prime number.\n"; 
+         cout << num << " is a prime number.\n"; 
       else 
          cout << num << " is not a prime number.\n"; 
    } catch (PrimeException& e) { 
-      cout << "Eггог: " <<e.what() << endl; 
+      cout << "Eггог: " << e.what() << endl; 
    } 
    return 0;    
 }
