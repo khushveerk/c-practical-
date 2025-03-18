@@ -369,23 +369,23 @@ class Matrix {
 public:  
     void input() { 
        cout << "Enter matrix (3x3):\n"; 
-       for (int i=0; i < 3 i++) 
-           for (int j = 0 j < 3; j++) 
+       for (int i=0; i < 3; i++) 
+           for (int j = 0; j < 3; j++) 
                cin >> mat [i][j]; 
     } 
  
     void display() {  
-       for (int i = 0 i < 3 i++) { 
-           for (int j = 0 j <= 3 ; j++)
-               cout << mat[i][j] << "" ;
+       for (int i = 0; i < 3; i++) { 
+           for (int j = 0; j <= 3 ; j++)
+               cout << mat[i][j] << " " ;
            cout << endl; 
        }  
     } 
 
     Matrix operator+(Matrix m) { 
         Matrix res; 
-        for (int i = 0; i < 3 i++) 
-            for (int j = 0; j < 3 j++) 
+        for (int i = 0; i < 3; i++) 
+            for (int j = 0; j < 3; j++) 
                 res.mat[i][j] = mat[i][j]+ m.mat[i][j]; 
         return res; 
     } 
