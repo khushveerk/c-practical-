@@ -22,7 +22,7 @@ int main() {
    int n; 
    cout << "Enter the number of terms: "; 
    cin>>n; 
-   cout "Sum of series: <<< seriesSum(n) endl;  
+   cout << "Sum of series: " << seriesSum(n) << endl;  
    return 0; 
 }
 
