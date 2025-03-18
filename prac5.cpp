@@ -6,7 +6,7 @@ vector<int> mergeArrays (vector<int>& arr1, vector<int>& arr2) {
    vector<int> merged; 
    int i = 0, j = 0; 
    
-   while (i < arr1.size() && jarr2.size()) { 
+   while (i < arr1.size() && j < arr2.size()) { 
       if (arr1[i] < arr2[j])
          merged.push_back(arr1[i++]); 
       else 
@@ -17,9 +17,11 @@ vector<int> mergeArrays (vector<int>& arr1, vector<int>& arr2) {
    return merged; 
 } 
 int main() { 
-    vector<int> arr1= {(1, 3, 5, 5,7};
-    vector<int> arr2 = {2, 4, 6, 8)}; 
-    vector<int> merged = mergeArrays (arr1, агг2); 
+    vector<int> arr1= {1, 3, 5, 5,7};
+    vector<int> arr2 = {2, 4, 6, 8}; 
+   
+    vector<int> merged = mergeArrays (arr1, аrr2); 
+   
     cout << "Merged sorted array: "; 
     for (int num: merged) cout << num << " "; 
     return 0;
