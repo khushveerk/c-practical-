@@ -10,7 +10,7 @@ public:
 
    // Area with 3 sides (Heron's formula) 
    double area(double a, double b, double c) { 
-      double s (a + b + c) / 2; 
+      double s= (a + b + c) / 2; 
       return sqrt(s* (s-a)*(s-b)*(s-c)); 
    } 
 }; 
@@ -18,7 +18,7 @@ public:
 int main() { 
    Triangle t; 
    cout << "Area (Base, Height): " << t.area(7, 13) << endl; 
-   cout << "Area (Three Sides): " << t.area(2, 5, 9) << endl; 
+   cout << "Area (Three Sides): " << t.area(2, 5, 7) << endl; 
    return 0;
 }
 
