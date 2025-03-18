@@ -8,7 +8,7 @@ protected:
 
 public: 
    void input() { 
-      cout << "Enter name and age:  
+      cout << "Enter name and age: "; 
       cin >> name >> age; 
    }
    void display() { 
@@ -22,7 +22,7 @@ class Student public Person {
 public: 
    void input() { 
       Person::input(); 
-      cout << "Enter course: 
+      cout << "Enter course: ";
       cin >> course; 
    } 
    void display() { 
