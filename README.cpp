@@ -613,11 +613,13 @@ int main() {
 
 ##13
 
-#include <iostream using namespace std; 
+#include <iostream>
+using namespace std; 
 
 class Student { 
 public: 
-   int rollNo; string name; 
+   int rollNo; 
+   string name; 
    string className; 
    int year; 
    float totalMarks; 
@@ -643,7 +645,7 @@ int main() {
       students[i].input(); 
    } 
 cout<<"\nStudent Details: \n"; 
-for (int i=0; i < 5; 1++) { 
+for (int i=0; i < 5; i++) { 
 students[i].display(); 
 } 
 return 0; 
