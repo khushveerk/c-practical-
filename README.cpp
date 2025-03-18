@@ -457,7 +457,7 @@ protected:
 
 public: 
    void input() { 
-      cout << "Enter name and age:  
+      cout << "Enter name and age: " 
       cin >> name >> age; 
    }
    void display() { 
@@ -465,13 +465,13 @@ public:
    } 
 }; 
 
-class Student public Person { 
+class Student : public Person { 
    string course; 
 
 public: 
    void input() { 
       Person::input(); 
-      cout << "Enter course: 
+      cout << "Enter course: ";
       cin >> course; 
    } 
    void display() { 
@@ -480,7 +480,7 @@ public:
    } 
 }; 
 
-class Employee public Person { 
+class Employee : public Person { 
    int salary;  
 public: 
    void input() {
