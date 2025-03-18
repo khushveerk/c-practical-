@@ -3,18 +3,18 @@
 #include <map> 
   using namespace std; 
 
-void countOccurrences (string str) { 
-   map char, int freq; 
+void countoccurrences (string str) { 
+   map <char, int> freq; 
 
    for (char : str) { 
        if (isalpha(c)) { // Consider only alphabets  
-          freq[tolower(c)]++; 
+          freq[tolower(c)]++;  // Convert to lowercase before counting
       }  
    } 
    cout<< "Character Frequency Table:\n"; 
  
-   for (auto pair freq) { 
-       cout<<< pair.first<< " -> " << pair.second << endl; 
+   for (auto& pair freq) { 
+       cout << pair.first<< " -> " << pair.second << endl; 
    }
 }
 int main() { 
@@ -24,4 +24,4 @@ int main() {
 
    countoccurrences(input); 
    return 0; 
-
+}
