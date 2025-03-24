@@ -1,7 +1,8 @@
 #include <iostream>
 using namespace std; 
 
-struct Student {  
+class Student {  
+public:
    int rollNo;
    string name; 
    string className; 
