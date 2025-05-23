@@ -688,6 +688,6 @@ int main() {
 
 
 
-
+// 11 , 12 practical is not in new syllabus
 
    
