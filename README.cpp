@@ -126,14 +126,14 @@ int main() {
 void countoccurrences (string str) { 
    map <char, int> freq; 
 
-   for (char : str) { 
+   for (char c : str) { 
        if (isalpha(c)) { // Consider only alphabets  
           freq[tolower(c)]++; 
       }  
    } 
    cout<< "Character Frequency Table:\n"; 
  
-   for (auto& pair freq) { 
+   for (auto& pair : freq) { 
        cout << pair.first<< " -> " << pair.second << endl; 
    }
 }
@@ -145,22 +145,22 @@ int main() {
    countoccurrences(input); 
    return 0; 
 }
+// hello world 
 
 ##4
-
 #include <iostream> 
 #include <cstring> 
 using namespace std; 
 
-void displayASCII (string str) { 
+void displayASCII(string str) { 
    cout << "ASCII values: \n";
    for (char c: str) {  
-      cout << c << " ->" << int(c) << endl;
-    } 
+      cout << c << " -> " << int(c) << endl;
+   } 
 }  
 
-void concatenateStrings (char str1[], char str2[]) {  
-   int i= strlen(str1), j = 0; 
+void concatenateStrings(char str1[], char str2[]) {  
+   int i = strlen(str1), j = 0; 
    while (str2[j] != '\0') { 
       str1[i] = str2[j];  
       i++; j++;  
@@ -168,14 +168,14 @@ void concatenateStrings (char str1[], char str2[]) {
    str1[i] = '\0'; 
 } 
 
-bool compareStrings (char str1[], char str2[]) { 
+bool compareStrings(char str1[], char str2[]) { 
    int i = 0; 
    while (str1[i] != '\0' && str2[i] != '\0') { 
        if (str1[i] != str2[i]) 
            return false; 
-       t++;  
+       i++;  
    }   
-   return str1[i] = str2[i]; 
+   return str1[i] == str2[i]; 
 }
 
 int stringLength(char* str) { 
@@ -184,23 +184,21 @@ int stringLength(char* str) {
        len++; 
        str++; 
    } 
-return len; 
+   return len; 
 }
 
-void toUppercase (char str[]) { 
+void toUppercase(char str[]) { 
    int i = 0; 
    while (str[i] != '\0') { 
        if (str[i] >= 'a' && str[i] <= 'z') { 
-           str[i] = 32; 
+           str[i] -= 32;  // Correct way to convert to uppercase
        } 
        i++; 
    } 
 } 
 
-// Reverse string 
-
 void reverseString(char str[]) { 
-   int len = stringLength (str); 
+   int len = stringLength(str); 
    for (int i = 0; i < len / 2; i++) {
       swap(str[i], str[len-i-1]); 
    } 
@@ -210,65 +208,33 @@ int main() {
     char str1[100], str2[100]; 
     
     cout << "Enter first string: "; 
-    cin >> str1; 
+    cin.getline(str1, 100); 
     cout << "Enter second string: "; 
-    cin >> str2; 
+    cin.getline(str2, 100); 
 
     displayASCII(str1); 
 
-// Concatenation 
-
-    concatenateStrings (str1, str2); 
+    // Concatenation 
+    concatenateStrings(str1, str2); 
     cout << "Concatenated String: " << str1 << endl; 
 
-       // Comparison 
-    cout << "Strings are << (compareStrings (str1, str2) ? "equal": "not equal") << endl; 
+    // Comparison 
+    cout << "Strings are " << (compareStrings(str1, str2) ? "equal" : "not equal") << endl; 
 
-       // String length 
+    // String length 
     cout << "Length of first string: " << stringLength(str1) << endl; 
 
-       // Convert to uppercase 
+    // Convert to uppercase 
     toUppercase(str1); 
-    cout << "Uppercase String: "<< str1 << endl;
+    cout << "Uppercase String: " << str1 << endl;
 
-} 
+    // Reverse string 
+    reverseString(str1); 
+    cout << "Reversed String: " << str1 << endl; 
 
-// Reverse string 
-void reverseString(char str[]) { 
-   int len = stringLength(str); 
-   for (int i = 0; i < len / 2; i++) { 
-      swap(str[i], str[len i 1]); 
-   } 
-} 
-int main() { 
-   char str1[110], str2[110]; 
-
-   cout << "Enter first string: "; 
-   cin >> str1; 
-   cout << "Enter second string: 
-   cin >> str2; 
-
-   displayASCII(str1); 
-
-   // Concatenation 
-   concatenateStrings (str1, str2); 
-   cout << "Concatenated String: <<<< str1 << endl; 
-
-      // Comparison 
-   cout << "Strings are <<< (compareStrings (str1, str2) ? "equal": "not equal") <<< endl; 
-
-      // String length 
-   cout << "Length of first string: <<<<< stringLength(str1) << endl; 
-
-      // Convert to uppercase toUppercase(str1); 
-   cout << "Uppercase String: <<<<< str1 << endl; 
-
-      // Reverse string 
-   reverseString(str1); 
-   cout << "Reversed String: <<<< str1 << endl; 
-   return 0; 
+    return 0; 
 }
-
+// HELLO , WORLD 
 
 ##5 
 
@@ -338,7 +304,7 @@ int main() {
 
   int indexRec= binarySearchRecursive(arr, 0, arr.size() - 1, key); 
   cout<<" Recursive Binary Search:";
-   if (indexRec !=-1) ? cout << "Found at index" << indexRec << endl;
+   if (indexRec != -1) cout << "Found at index" << indexRec << endl;
    else cout << "Not found" << endl; 
 
 // Iterative search    
@@ -380,6 +346,7 @@ int main() {
    return 0; 
 } 
 
+// 45,15 OR ANY TWO NUMBERS
 
 ##8
 
@@ -467,6 +434,7 @@ int main() {
    return 0; 
 }
 
+// Enter matrix (3x3): 1 2 3 4 5 6 7 8 9  Enter matrix (3x3): 9 8 7 6 5 4 3 2 1
 
 ##9
 
@@ -480,7 +448,7 @@ protected:
 
 public: 
    void input() { 
-      cout << "Enter name and age: " 
+      cout << "Enter name and age: " ;
       cin >> name >> age; 
    }
    void display() { 
@@ -538,6 +506,92 @@ int main() {
 
 
 ##10
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+class Triangle {
+public:
+    // Area with base & height
+    double area(double base, double height) {
+        if (base <= 0 || height <= 0) {
+            throw "Base and height must be positive"; // Throwing string literal
+        }
+        return 0.5 * base * height;
+    }
+
+    // Area with 3 sides (Heron's formula)
+    double area(double a, double b, double c) {
+        if (a <= 0 || b <= 0 || c <= 0) {
+            throw "All sides must be positive";
+        }
+        if (a + b <= c || a + c <= b || b + c <= a) {
+            throw "Invalid triangle dimensions";
+        }
+        double s = (a + b + c) / 2;
+        return sqrt(s * (s - a) * (s - b) * (s - c));
+    }
+};
+
+int main() {
+    Triangle t;
+    
+    try {
+        cout << "Area (Base, Height): " << t.area(7, 13) << endl;
+        cout << "Area (Three Sides): " << t.area(3, 4, 5) << endl;
+    }
+    catch (const char* e) { // Catching string literal
+        cerr << "Error: " << e << endl;
+    }
+    
+    return 0;
+}
+
+                    //OR 
+  
+#include <iostream> 
+#include <cmath> 
+#include <stdexcept>
+using namespace std; 
+
+class Triangle { 
+public: 
+   // Area with base & height 
+   double area(double base, double height) {
+      if (base <= 0 || height <= 0) {
+         throw invalid_argument("Base and height must be positive");
+      }
+      return 0.5 * base * height; 
+   } 
+
+   // Area with 3 sides (Heron's formula) 
+   double area(double a, double b, double c) { 
+      if (a <= 0 || b <= 0 || c <= 0) {
+         throw invalid_argument("All sides must be positive");
+      }
+      if (a + b <= c || a + c <= b || b + c <= a) {
+         throw invalid_argument("Invalid triangle dimensions");
+      }
+      double s = (a + b + c) / 2; 
+      return sqrt(s * (s - a) * (s - b) * (s - c)); 
+   } 
+}; 
+
+int main() { 
+   Triangle t; 
+   
+   try {
+      cout << "Area (Base, Height): " << t.area(7, 13) << endl; 
+      cout << "Area (Three Sides): " << t.area(3, 4, 5) << endl;
+   }
+   catch (const invalid_argument& e) {
+      cerr << "Error: " << e.what() << endl;
+   }
+   
+   return 0;
+}
+
+  // not the below one 
 
 #include <iostream> 
 using namespace std; 
@@ -674,7 +728,7 @@ students[i].display();
 return 0; 
 } 
 
-
+ 
 ##14
 
    
